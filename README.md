@@ -24,12 +24,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Intro section with dropdown navigation screenshot](./screenshot.jpg)
+![Intro section with dropdown navigation screenshot](https://github.com/Marchino5791/Frontend-Mentor-Intro-section-with-dropdown-navigation/blob/main/Screenshot%202023-02-13%2017.25.47.png)
 
 ### Links
 
 - Solution URL: [https://github.com/Marchino5791/Frontend-Mentor-Intro-section-with-dropdown-navigation](https://github.com/Marchino5791/Frontend-Mentor-Intro-section-with-dropdown-navigation)
-- Live Site URL: [https://github.com/Marchino5791/Frontend-Mentor-Intro-section-with-dropdown-navigation/blob/main/Screenshot%202023-02-13%2017.25.47.png](https://github.com/Marchino5791/Frontend-Mentor-Intro-section-with-dropdown-navigation/blob/main/Screenshot%202023-02-13%2017.25.47.png)
+- Live Site URL: []()
 
 ## My process
 
