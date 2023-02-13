@@ -25,4 +25,5 @@ $("#company-link").click(function () {
 $(window).resize(function () {
     $(".menu").removeClass("show-menu");
     $(".overlay-effect").removeClass("show-overlay");
+    $("body").removeClass("block-scroll");
 });
