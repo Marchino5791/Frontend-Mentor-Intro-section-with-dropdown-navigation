@@ -11,12 +11,12 @@ $(".menu__close").click(function () {
 
 $("#features-link").click(function () {
     $(".features").slideToggle(300);
-    $(".arrow").toggleClass("arrow-up");
+    $("#features-link-menu").toggleClass("arrow-up");
 })
 
 $("#company-link").click(function () {
     $(".company").slideToggle(300);
-    $(".arrow").toggleClass("arrow-up");
+    $("#company-link-menu").toggleClass("arrow-up");
 })
 
 

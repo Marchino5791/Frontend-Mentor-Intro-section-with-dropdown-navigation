@@ -173,7 +173,6 @@ main figure img:nth-of-type(2) {
   display: none;
   z-index: 9999;
   flex-direction: column;
-  overflow: visible;
 }
 .menu a,
 .menu a:link,
