@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+@mixin arrow {
+    content: "";
+    display: inline-block;
+    width: .5rem;
+    height: .25rem;
+    background-image: url("../images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 1rem;
+
+    @include breakpoint(tablet){
+        margin-left: 0.5rem;
+    }
+}
+
+@mixin breakpoint($size) {
+    @media(min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+@mixin nav-hover {
+    color: $primary;
+    font-weight: 700;
+}

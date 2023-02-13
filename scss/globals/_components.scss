@@ -1,0 +1,266 @@
+@use "mixin" as mix;
+@use "variables" as *;
+
+.logo {
+
+    @include mix.breakpoint(laptop) {
+        margin-right: 1.5rem;
+    }
+}
+
+.open {
+    border: none;
+    background-color: none;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+
+    @include mix.breakpoint(tablet) {
+        display: none;
+    }
+}
+
+.menu {
+    position: absolute;
+    background-color: $bg;
+    color: $secondary;
+    inset: 0 0 0 40%;
+    padding-inline: 1.5rem;
+    display: none;
+    z-index: 9999;
+    flex-direction: column;
+    overflow: visible;
+
+    a,
+    a:link,
+    a:visited {
+        color: currentColor;
+        text-decoration: none;
+    }
+
+    a:hover {
+        @include mix.nav-hover;
+    }
+
+
+    @include mix.breakpoint(tablet) {
+        display: flex;
+        flex-direction: row;
+        position: initial;
+        inset: initial;
+        padding-top: 0;
+        justify-content: space-between;
+        width: 100%;
+        padding-inline: 0;
+        font-size: 0.875rem;
+    }
+
+    .menu__close {
+        border: none;
+        background: none;
+        margin-block: 1rem 2rem;
+        display: flex;
+        margin-left: auto;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+
+        @include mix.breakpoint(tablet) {
+            display: none;
+        }
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    &__list {
+
+        .features {
+            display: none;
+
+            @include mix.breakpoint(tablet) {
+                left: -1.125rem;
+            }
+        }
+
+        .company {
+            display: none;
+
+            @include mix.breakpoint(tablet) {
+                left: 9.875rem;
+            }
+        }
+
+        @include mix.breakpoint(tablet) {
+            display: flex;
+            position: relative;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            @include mix.breakpoint(tablet) {
+                margin-bottom: 0;
+                margin-left: 2.5rem;
+            }
+        }
+
+        .arrow::after {
+            @include mix.arrow;
+        }
+
+        .arrow-up::after{
+            @include mix.arrow;
+            background-image: url("../images/icon-arrow-up.svg");
+        }
+
+        &__sub {
+            margin: 1.5rem;
+            background-color: $bg;
+
+            @include mix.breakpoint(tablet) {
+                position: absolute;
+                top: 4.25rem;
+                padding: 1.5rem;
+                margin: 0;
+                border-radius: 10px;
+                box-shadow: .25rem .25rem 3rem .5rem rgba(0, 0, 0, .1);
+
+            }
+
+            &:first-of-type {
+                padding-left: 1.5rem;
+
+                @include mix.breakpoint(tablet) {
+                    padding-left: 2.5rem;
+                }
+            }
+
+            &__item:not(:last-of-type) {
+                margin-bottom: 1rem;
+            }
+
+            .todo {
+                list-style-image: url("../images/icon-todo.svg");
+            }
+
+            .calendar {
+                list-style-image: url("../images/icon-calendar.svg");
+            }
+
+            .reminders {
+                list-style-image: url("../images/icon-reminders.svg");
+            }
+
+            .planning {
+                list-style-image: url("../images/icon-planning.svg");
+            }
+        }
+    }
+
+    &__user {
+        display: flex;
+        flex-direction: column;
+
+        @include mix.breakpoint(tablet) {
+            flex-direction: row;
+        }
+
+        &__login {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: currentColor;
+
+            &:hover {
+                @include mix.nav-hover;
+            }
+
+            @include mix.breakpoint(tablet) {
+                margin-top: 0;
+            }
+        }
+
+        &__register {
+            @extend .menu__user__login;
+            border: 1px solid $primary;
+            border-radius: 1rem;
+            padding: 1rem;
+
+            @include mix.breakpoint(tablet) {
+                margin-left: 2.5rem
+            }
+        }
+    }
+}
+
+.text-box__heading {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    color: $primary;
+
+    @include mix.breakpoint(tablet) {
+        font-size: 3.25rem;
+    }
+
+    @include mix.breakpoint(laptop) {
+        font-size: 5rem;
+    }
+}
+
+.text-box__secondary {
+    margin: 0 1rem 1.5rem 1rem;
+    line-height: 1.6;
+    color: $secondary;
+
+    @include mix.breakpoint(tablet) {
+        font-size: 1.125rem;
+        margin: 3rem 0rem 3rem 0rem;
+    }
+
+    @include mix.breakpoint(laptop) {
+        width: 80%;
+    }
+}
+
+.text-box__learn-more {
+    @extend .menu__user__register;
+    font-size: 1rem;
+    padding-inline: 1.5rem;
+    margin-bottom: 3rem;
+    margin-left: 0;
+    background-color: $primary;
+    color: $bg;
+
+    &:hover {
+        background-color: $bg;
+        color: $primary;
+    }
+
+    @include mix.breakpoint(tablet) {
+        margin-bottom: 0;
+    }
+}
+
+.show-menu {
+    display: flex;
+
+    @include mix.breakpoint (tablet) {
+        display: flex;
+    }
+}

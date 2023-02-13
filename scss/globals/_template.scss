@@ -1,0 +1,145 @@
+@use "mixin" as mix;
+@use "variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+
+body {
+    background-color: $bg;
+    position: relative;
+}
+
+.overlay-effect {
+    background-color: $primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .75;
+    display: none;
+ 
+}
+
+.show-overlay {
+    display: block;
+
+    @include mix.breakpoint (tablet) {
+        display: none;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    @include mix.breakpoint(tablet) {
+        display: flex;
+        align-items: center;
+        position: initial;
+        inset: initial;
+    }
+
+    @include mix.breakpoint(laptop) {
+        padding: 1.25rem 2.5rem;
+    }
+}
+
+main {
+    @include mix.breakpoint(tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr min-content 1fr;
+        align-items: end;
+        margin: 1rem;
+        column-gap: 2%;
+        width: 95%;
+        margin-inline: auto;
+    }
+
+    @include mix.breakpoint(laptop) {
+        max-width: 1200px;
+        margin-inline: auto;
+        column-gap: 7.5rem;
+    }
+
+    picture {
+        @include mix.breakpoint(tablet) {
+            grid-column: 2 / -1;
+            grid-row: 1 / -1;
+        }
+
+        img {
+            width: 100%;
+            margin-block: 1.5rem 3rem;
+            display: block;
+
+            @include mix.breakpoint(tablet) {
+                margin-block: 0;
+            }
+        }
+    }
+
+    .text-box {
+        text-align: center;
+
+        @include mix.breakpoint(tablet) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            text-align: left;
+        }
+
+    }
+
+    figure {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 1rem 2rem 1rem;
+        height: 1.625rem;
+        max-width: 100%;
+
+        @include mix.breakpoint(tablet) {
+            grid-column: 1 / 2;
+            grid-row: 3 / -1;
+            margin: 0;
+        }
+
+        img {
+            height: 1rem;
+
+            @include mix.breakpoint(laptop) {
+                height: auto;
+            }
+        }
+
+        img:nth-of-type(2) {
+            height: 1.75rem;
+
+            @include mix.breakpoint(laptop) {
+                height: auto;
+            }
+        }
+
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-block: 1rem;
+
+    .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+    @include mix.breakpoint (tablet) {
+        display: none;
+    }
+}
+

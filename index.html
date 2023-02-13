@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+
+<body>
+
+  <div class="overlay-effect">
+
+  </div>
+
+  <header>
+
+    <img src="images/logo.svg" alt="logo" class="logo">
+
+    <nav class="menu">
+
+      <button class="menu__close" title="close">
+        <img src="images/icon-close-menu.svg" alt="close menu" class="menu__close__img">
+      </button>
+
+      <ul class="menu__list">
+        <li class="menu__list__item arrow"><a href="#" id="features-link">Features</a></li>
+        <ul class="menu__list__sub features">
+          <li class="menu__list__sub__item todo"><a href="#">Todo List</a></li>
+          <li class="menu__list__sub__item calendar"><a href="#">Calendar</a></li>
+          <li class="menu__list__sub__item reminders"><a href="#">Reminders</a></li>
+          <li class="menu__list__sub__item planning"><a href="#">Planning</a></li>
+        </ul>
+        <li class="menu__list__item arrow"><a href="#" id="company-link">Company</a></li>
+        <ul class="menu__list__sub company">
+          <li class="menu__list__sub__item"><a href="#">History</a></li>
+          <li class="menu__list__sub__item"><a href="#">Our Team</a></li>
+          <li class="menu__list__sub__item"><a href="#">Blog</a></li>
+        </ul>
+        <li class="menu__list__item"><a href="#">Careers</a></li>
+        <li class="menu__list__item"><a href="#">About</a></li>
+      </ul>
+
+      <div class="menu__user">
+        <button class="menu__user__login">Login</button>
+        <button class="menu__user__register">Register</button>
+      </div>
+
+    </nav>
+
+    <button class="open" title="open">
+      <img src="images/icon-menu.svg" alt="open menu" class="open__img">
+    </button>
+  </header>
+
+  <main>
+    <picture>
+      <source srcset="images/image-hero-desktop.png" media="(min-width: 46em)">
+      <img src="images/image-hero-mobile.png" alt="image hero">
+    </picture>
+
+    <div class="text-box">
+      <h1 class="text-box__heading">Make remote work</h1>
+      <p class="text-box__secondary">Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.</p>
+      <button class="text-box__learn-more">Learn more</button>
+    </div>
+
+    <figure>
+      <img src="images/client-databiz.svg" alt="Databiz's logo">
+      <img src="images/client-audiophile.svg" alt="Audiophile's logo">
+      <img src="images/client-meet.svg" alt="Meet's logo">
+      <img src="images/client-maker.svg" alt="Maker's logo">
+    </figure>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Marchino5791" target="_blank">Marco Paolino</a>.
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
