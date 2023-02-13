@@ -100,7 +100,7 @@ main figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 1rem 2rem 1rem;
+  margin: 1rem 1rem 2rem 1rem;
   height: 1.625rem;
   max-width: 100%;
 }
@@ -413,5 +413,14 @@ main figure img:nth-of-type(2) {
 @media (min-width: 46em) {
   .show-menu {
     display: flex;
+  }
+}
+
+.block-scroll {
+  overflow: hidden;
+}
+@media (min-width: 46em) {
+  .block-scroll {
+    overflow: auto;
   }
 }/*# sourceMappingURL=style.css.map */

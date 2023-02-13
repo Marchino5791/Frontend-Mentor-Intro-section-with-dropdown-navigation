@@ -2,11 +2,13 @@
 $(".open").click(function() {
     $(".menu").addClass("show-menu");
     $(".overlay-effect").addClass("show-overlay");
+    $("body").addClass("block-scroll");
 })
 
 $(".menu__close").click(function () {
     $(".menu").removeClass("show-menu");
     $(".overlay-effect").removeClass("show-overlay");
+    $("body").removeClass("block-scroll");
 })
 
 $("#features-link").click(function () {
@@ -19,9 +21,7 @@ $("#company-link").click(function () {
     $("#company-link-menu").toggleClass("arrow-up");
 })
 
-
-
-// reset when screen is > 500px
+// reset when user resize screen
 $(window).resize(function () {
     $(".menu").removeClass("show-menu");
     $(".overlay-effect").removeClass("show-overlay");

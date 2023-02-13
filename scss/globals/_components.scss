@@ -263,3 +263,11 @@
         display: flex;
     }
 }
+
+.block-scroll {
+    overflow: hidden;
+
+    @include mix.breakpoint (tablet) {
+        overflow: auto;
+    }
+}
